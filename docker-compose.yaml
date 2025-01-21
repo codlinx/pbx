@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   issabel:
-    image: cubicerp/issabel:live
+    image: cubicerp/issabel:latest
     container_name: issabel
     privileged: true
     hostname: pbx.codlinx.com.br
