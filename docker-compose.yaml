@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   issabel:
-    image: issabelpbx/issabel:latest
+    image: cubicerp/issabel:live
     container_name: issabel
     ports:
       - "5555:80" # Porta HTTP
