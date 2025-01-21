@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  issabel:
+    image: issabelpbx/issabel:latest
+    container_name: issabel
+    ports:
+      - "5555:80" # Porta HTTP
+      - "45555:443" # Porta HTTPS
+      - "5060:5060/udp" # Porta SIP
+      - "5061:5061/tcp" # Porta SIP-TLS
+      - "10000-20000:10000-20000/udp" # Portas RTP
+    volumes:
+      - issabel_data:/var/www/html
+      - issabel_etc:/etc
+      - issabel_log:/var/log
+    environment:
+      TZ: America/Sao_Paulo # Defina o fuso horário
+    restart: always
+
+volumes:
+  issabel_data:
+  issabel_etc:
+  issabel_log:
